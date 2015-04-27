@@ -10,7 +10,7 @@ Rails.application.routes.draw do
   # get 'products/index'
 
   resources :products, only: [:index]
-  resources :cart, only: [:show]
+  resource :cart, only: [:show]
   resources :order_items, only: [:create, :update, :destroy]
   root to: "products#index"
 
